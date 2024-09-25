@@ -1,0 +1,23 @@
+{
+  "name": "iframe-micro-frontend-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:main": "cd packages/main-app && pnpm i",
+    "install:child": "cd packages/child-app-next && pnpm i",
+    "bootstrap": "pnpm install && npm-run-all --parallel install:main install:child",
+    "dev:main": "cd packages/main-app && pnpm dev",
+    "dev:child": "cd packages/child-app-next && pnpm dev",
+    "dev": "npm-run-all --parallel dev:main dev:child"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
