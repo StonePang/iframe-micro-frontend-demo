@@ -9,7 +9,13 @@
     "bootstrap": "pnpm install && npm-run-all --parallel install:main install:child",
     "dev:main": "cd packages/main-app && pnpm dev",
     "dev:child": "cd packages/child-app-next && pnpm dev",
-    "dev": "npm-run-all --parallel dev:main dev:child"
+    "dev": "npm-run-all --parallel dev:main dev:child",
+    "build:main": "cd packages/main-app && pnpm build",
+    "build:child": "cd packages/child-app-next && pnpm build",
+    "build": "npm-run-all --parallel build:main build:child",
+    "start:main": "cd packages/main-app && pnpm start",
+    "start:child": "cd packages/child-app-next && pnpm start",
+    "start": "npm-run-all --parallel start:main start:child"
   },
   "keywords": [],
   "author": "",
